@@ -5,7 +5,7 @@ import {
 } from '../controller/auth.controller.js';
 import {
   registerValidation,
-} from '../validation/auth.validation.js';
+} from '../validations/auth.validation.js';
 
 const authRouter = express.Router();
 
