@@ -15,12 +15,5 @@ const authRouter = express.Router();
  * @access Public
  */
 authRouter.post('/register',  registerValidation, registerController);
-    
-/**
- * @route POST /api/auth/login
- * @desc Authenticate user and get token
- * @access Public
- */
-authRouter.post('/login');
 
 export default authRouter;
