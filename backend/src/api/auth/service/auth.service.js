@@ -14,34 +14,21 @@ const JWT_EXPIRES_IN = process.env.JWT_EXPIRES_IN || '1d';
 // }
 
 const normalizeEmail = email => email.trim().toLowerCase();
-import bcrypt from "bcryptjs";
-import jwt from "jsonwebtoken";
-import { safeExecute } from "../../../../db/config.js";
-import {
-  BadRequestError,
-  UnauthenticatedError,
-} from "../../../utils/errors/index.js";
 
 // *** Bilal's start task ***
-
-const normalizeEmail = (email) => email.trim().toLowerCase();
-
 /**
  * Checks if a user exists by email.
  *
  * @param {string} email - The email to check.
  * @returns {Promise<boolean>} True if the user exists, false otherwise.
- */
-export const checkUserExists = async email => {
-  const normalizedEmail = normalizeEmail(email);
-  const sql = 'SELECT user_id FROM users WHERE email = ? LIMIT 1';
+ */ 
+
 export const checkUserExists = async (email) => {
   const normalizedEmail = normalizeEmail(email);
   const sql = "SELECT user_id FROM users WHERE email = ? LIMIT 1";
   const rows = await safeExecute(sql, [normalizedEmail]);
   return rows.length > 0;
 };
-
 
 //login service
 export const loginService = async (email, password) => {

@@ -1,7 +1,9 @@
 
 import { StatusCodes } from 'http-status-codes';
 import { loginService } from '../service/auth.service.js';
+import { registerService } from '../service/auth.service.js';
 
+//function to handle user login
 export const loginController = async (req, res, next) => {
     try {
     const { email, password } = req.body;
@@ -18,8 +20,7 @@ export const loginController = async (req, res, next) => {
         next(error);
     }
 }
-import { StatusCodes } from 'http-status-codes';
-import { registerService, loginService } from '../service/auth.service.js';
+
 
 // *** Bilal start task ***
 /**
