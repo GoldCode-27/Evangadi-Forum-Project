@@ -31,6 +31,7 @@ export const registerValidation = [
   validationErrorHandler,
 ];
 
+//login validation
 export const loginValidation = [
   body('email')
     .notEmpty()
