@@ -1,6 +1,6 @@
-import express from 'express';
-const questionRouter = express.Router();
+// import express from 'express';
+// const questionRouter = express.Router();
 
-questionRouter.post('/questions');
+// questionRouter.post('/questions');
 
-export default questionRouter;
+// export default questionRouter;
