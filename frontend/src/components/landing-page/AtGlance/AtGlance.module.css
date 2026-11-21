@@ -1,0 +1,49 @@
+.card {
+  background-color: #ffffff;
+  border: 1px solid #e6e8ec;
+  border-radius: 12px;
+  padding: 20px 22px;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+}
+
+.heading {
+  margin: 0 0 14px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #6b7280;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.checkIcon {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: #ea580c;
+}
+
+.description {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: #374151;
+}
+
+.itemLabel {
+  font-weight: 600;
+  color: #111827;
+}
