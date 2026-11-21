@@ -1,4 +1,12 @@
 import express from 'express';
+
+import {
+  registerController,
+} from '../controller/auth.controller.js';
+import {
+  registerValidation,
+} from '../validations/auth.validation.js';
+
 const authRouter = express.Router();
 
 /**
@@ -6,13 +14,6 @@ const authRouter = express.Router();
  * @desc Register a new user
  * @access Public
  */
-authRouter.post('/register');
-    
-/**
- * @route POST /api/auth/login
- * @desc Authenticate user and get token
- * @access Public
- */
-authRouter.post('/login');
+authRouter.post('/register',  registerValidation, registerController);
 
 export default authRouter;
