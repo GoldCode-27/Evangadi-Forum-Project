@@ -7,7 +7,7 @@ export const db = mysql.createPool({
   host: process.env.DB_HOST || 'localhost',
   user: process.env.DB_USER || 'root',
   password: process.env.DB_PASS || '',
-  database: process.env.DB_NAME || 'ai-powered-evangady-form',
+  database: process.env.DB_NAME || 'ai-evangadi-forum',
 });
 
 const ensureParams = params => {
@@ -20,7 +20,7 @@ const ensureParams = params => {
     throw new Error('SQL parameters must be an array or object');
   }
 };
-
+ 
 export const safeExecute = async (sql, params) => {
   if (typeof sql !== 'string' || sql.trim().length === 0) {
     throw new Error('SQL query must be a non-empty string');
