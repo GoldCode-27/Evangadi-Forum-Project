@@ -12,13 +12,15 @@ import {
   FileText,
   Database,
 } from 'lucide-react';
-import { useAuth } from '../../contexts/AuthContext';
-import styles from './Landing.module.css';
+// import { useAuth } from '../../contexts/AuthContext';
+// const { isAuthenticated } = useAuth();
+  const isAuthenticated = false;
+import styles from './landingPage.module.css';
 
 export default function Landing() {
   const navigate = useNavigate();
-  const { isAuthenticated } = useAuth();
-
+  // const { isAuthenticated } = useAuth();
+    const  isAuthenticated = false;
   const scrollToHowItWorks = () => {
     document
       .getElementById('how-it-works')
@@ -312,7 +314,7 @@ export default function Landing() {
                       reuse explanations before exams and interviews.
                     </p>
                   </article>
-                  <article className={styles.landing__card}>
+                  <article className={styles.landing__card} >
                     <div className={styles.landing__cardIcon} aria-hidden>
                       <Sparkles size={22} strokeWidth={1.75} />
                     </div>
@@ -325,7 +327,7 @@ export default function Landing() {
                       post.
                     </p>
                   </article>
-                  <article className={${styles.landing__card} }>
+                  <article className={styles.landing__card}>
                     <div className={styles.landing__cardIcon} aria-hidden>
                       <Layers size={22} strokeWidth={1.75} />
                     </div>
