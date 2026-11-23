@@ -1,16 +1,8 @@
 import express from 'express';
-import {
-  loginController,
-} from '../controller/auth.controller.js';
-import {
-  loginValidation,
-} from '../validations/auth.validation.js';
-import {
-  registerController,
-} from '../controller/auth.controller.js';
-import {
-  registerValidation,
-} from '../validations/auth.validation.js';
+import {loginController} from '../controller/auth.controller.js';
+import {loginValidation} from '../validations/auth.validation.js';
+import {registerController} from '../controller/auth.controller.js';
+import {registerValidation} from '../validations/auth.validation.js';
 const authRouter = express.Router();
 
 /**
