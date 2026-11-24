@@ -1,13 +1,13 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import {Auth} from './pages/Auth/Auth';
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<Landing />} />
-        <Route path='/auth' element={<Auth />} />
-      </Routes>
-    </BrowserRouter>
+    <div className="App">
+      <header className="App-header">
+        <h1>Welcome to the App</h1>
+      </header>
+      <main>
+        <p>This is the main content area.</p>
+      </main>
+    </div>
   );
 }
 
