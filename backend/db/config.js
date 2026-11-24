@@ -20,7 +20,7 @@ const ensureParams = params => {
     throw new Error('SQL parameters must be an array or object');
   }
 };
-
+ 
 export const safeExecute = async (sql, params) => {
   if (typeof sql !== 'string' || sql.trim().length === 0) {
     throw new Error('SQL query must be a non-empty string');
